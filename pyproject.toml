@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools==75.8.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eihmr-release"
+version = "0.1.0"
+description = "Single-pipeline EIHMR research reproduction"
+requires-python = ">=3.10,<3.11"
+license = {file = "LICENSE"}
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements-package.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["lib*"]
